@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Fill game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="mapncanvas">
+        <div id="fill8x8">
+            <div id="line1">
+                <button class="btn" id="1x8" onclick="line('0')"></button>
+                <button class="btn" id="2x8" onclick="line('1')"></button>
+                <button class="btn" id="3x8" onclick="line('2')"></button>
+                <button class="btn" id="4x8" onclick="line('3')"></button>
+                <button class="btn" id="5x8" onclick="line('4')"></button>
+                <button class="btn" id="6x8" onclick="line('5')"></button>
+                <button class="btn" id="7x8" onclick="line('6')"></button>
+                <button class="btn" id="8x8" onclick="line('7')"></button>
+            </div>
+            <div id="line2">
+                <button class="btn" id="1x7" onclick="line('8')"></button>
+                <button class="btn" id="2x7" onclick="line('9')"></button>
+                <button class="btn" id="3x7" onclick="line('10')"></button>
+                <button class="btn" id="4x7" onclick="line('11')"></button>
+                <button class="btn" id="5x7" onclick="line('12')"></button>
+                <button class="btn" id="6x7" onclick="line('13')"></button>
+                <button class="btn" id="7x7" onclick="line('14')"></button>
+                <button class="btn" id="8x7" onclick="line('15')"></button>
+            </div>
+            <div id="line3">
+                <button class="btn" id="1x6" onclick="line('16')"></button>
+                <button class="btn" id="2x6" onclick="line('17')"></button>
+                <button class="btn" id="3x6" onclick="line('18')"></button>
+                <button class="btn" id="4x6" onclick="line('19')"></button>
+                <button class="btn" id="5x6" onclick="line('20')"></button>
+                <button class="btn" id="6x6" onclick="line('21')"></button>
+                <button class="btn" id="7x6" onclick="line('22')"></button>
+                <button class="btn" id="8x6" onclick="line('23')"></button>
+            </div>
+            <div id="line4">
+                <button class="btn" id="1x5" onclick="line('24')"></button>
+                <button class="btn" id="2x5" onclick="line('25')"></button>
+                <button class="btn" id="3x5" onclick="line('26')"></button>
+                <button class="btn" id="4x5" onclick="line('27')"></button>
+                <button class="btn" id="5x5" onclick="line('28')"></button>
+                <button class="btn" id="6x5" onclick="line('29')"></button>
+                <button class="btn" id="7x5" onclick="line('30')"></button>
+                <button class="btn" id="8x5" onclick="line('31')"></button>
+            </div>
+            <div id="line5">
+                <button class="btn" id="1x4" onclick="line('32')"></button>
+                <button class="btn" id="2x4" onclick="line('33')"></button>
+                <button class="btn" id="3x4" onclick="line('34')"></button>
+                <button class="btn" id="4x4" onclick="line('35')"></button>
+                <button class="btn" id="5x4" onclick="line('36')"></button>
+                <button class="btn" id="6x4" onclick="line('37')"></button>
+                <button class="btn" id="7x4" onclick="line('38')"></button>
+                <button class="btn" id="8x4" onclick="line('39')"></button>
+            </div>
+            <div id="line6">
+                <button class="btn" id="1x3" onclick="line('40')"></button>
+                <button class="btn" id="2x3" onclick="line('41')"></button>
+                <button class="btn" id="3x3" onclick="line('42')"></button>
+                <button class="btn" id="4x3" onclick="line('43')"></button>
+                <button class="btn" id="5x3" onclick="line('44')"></button>
+                <button class="btn" id="6x3" onclick="line('45')"></button>
+                <button class="btn" id="7x3" onclick="line('46')"></button>
+                <button class="btn" id="8x3" onclick="line('47')"></button>
+            </div>
+            <div id="line7">
+                <button class="btn" id="1x2" onclick="line('48')"></button>
+                <button class="btn" id="2x2" onclick="line('49')"></button>
+                <button class="btn" id="3x2" onclick="line('50')"></button>
+                <button class="btn" id="4x2" onclick="line('51')"></button>
+                <button class="btn" id="5x2" onclick="line('52')"></button>
+                <button class="btn" id="6x2" onclick="line('53')"></button>
+                <button class="btn" id="7x2" onclick="line('54')"></button>
+                <button class="btn" id="8x2" onclick="line('55')"></button>
+            </div>
+            <div id="line8">
+                <button class="btn" id="1x1" onclick="line('56')"></button>
+                <button class="btn" id="2x1" onclick="line('57')"></button>
+                <button class="btn" id="3x1" onclick="line('58')"></button>
+                <button class="btn" id="4x1" onclick="line('59')"></button>
+                <button class="btn" id="5x1" onclick="line('60')"></button>
+                <button class="btn" id="6x1" onclick="line('61')"></button>
+                <button class="btn" id="7x1" onclick="line('62')"></button>
+                <button class="btn" id="8x1" onclick="line('63')"></button>
+            </div>
+        </div>
+        <div id="canvasdiv">
+            <canvas id="myCanvas" width="800" height="800" style="border:1px solid #c3c3c3;">Your browser does not support the canvas element.</canvas>
+        </div>
+    </div>
+    <div id="controls">
+        <input id="mapinput" type="text" name="FirstName" value="">
+        <button id="mapsize" onclick="mapsize()">click</button>
+        <button id="mapsize" onclick="selectstart()">start</button>
+        <button id="mapsize" onclick="selectslut()">slut</button>
+        <button onclick="start()">calculate</button>
+        <button onclick="window.location.assign('')">restart</button>
+        <button onclick="abort()">abort mission!!</button>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>
