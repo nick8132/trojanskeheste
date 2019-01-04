@@ -1,0 +1,117 @@
+@charset UTF-8;
+
+#korpus {
+	height: 250px;
+	width: 250px;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#myInput {
+	background-color: #87b0c1;
+	width: auto;
+	outline: none;
+	border: none;
+	height: 21px;
+	text-align: center;
+}
+input::placeholder {
+	color: #2c3e50;
+}
+
+#tissemand{
+	text-align: center;
+}
+
+#knap{
+	background-color: #87b0c1;
+	border: none;
+	color: #2c3e50;
+	padding: 2px 12px;
+	text-align: center;
+	display: inline-block;
+	font-size: auto;
+	margin: 2px 1px;
+	transition-duration: 0.4s;
+ 	cursor: pointer;
+ 	border: 2px solid #87b0c1;
+ 	outline: none;
+}
+#knap:hover {
+	background-color: #2c3e50;
+	color: white;
+	border: 2px solid #87b0c1;
+}
+
+#mysteryButton {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+#uha {
+	transition-duration: 0.4s;
+	background-color: #203e5d;
+	border: none;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	font-size: auto;
+	color: #212c3882;
+	outline: none;
+}
+
+#uha:hover {
+	background-color: #2c3e50;
+	color: white;
+	border: 2px solid #87b0c1;
+}
+
+#video1 {
+	position: absolute;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#secretPassage{
+	position: absolute;
+	top: 0px;
+	right: 0px
+}
+
+#knap1 {
+	transition-duration: 0.4s;
+	background-color: #203e5d;
+	border: none;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	font-size: auto;
+	color: #212c3882;
+	outline: none;
+}
+
+#knap1:hover {
+	background-color: #2c3e50;
+	color: white;
+	border: 2px solid #87b0c1;
+}
+
+#tilgængelig1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#tilgængelig2 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
