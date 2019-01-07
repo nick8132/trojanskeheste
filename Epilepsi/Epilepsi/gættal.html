@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mega Boppa</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+<body>
+	<div id="korpus">
+	<div id="tissemand">
+		<h1 id="result">Gæt et tal :)</h1>
+		<input id="myInput" placeholder="Skriv dit gæt her!">
+		<button id="knap" onclick="check();">Tjek</button>
+	</div>
+	<script type="text/javascript">
+		document.body.style.backgroundColor = "#2c3e50"
+		document.body.style.color = "lightblue"
+		var audio = new Audio('song.mp3')
+		var maks = 100
+		var tal = Generertal(maks)
+		var result = document.getElementById("result");
+		var isplaying = false;
+		function check(){
+			var nrinput = document.getElementById("myInput").value
+			if (nrinput >= 0 && nrinput <= maks){
+				if (nrinput == tal) {
+					result.innerHTML = "YOU GOT IT!"
+					audio.play();
+					setInterval(function(){
+						document.body.style.backgroundColor = getRandomColor()
+						document.body.style.color = getRandomColor()
+					}, 25);
+				}else if(nrinput > tal){
+					if(nrinput <= tal + 10){
+						result.innerHTML = "Du er tæt på! Bare lidt lavere"
+					}else{
+						result.innerHTML = "Lavere!"
+					}
+				}else{
+					if(nrinput >= tal - 10){
+						result.innerHTML = "Du er tæt på! Bare lidt højere"
+					}else{
+						result.innerHTML = "Højere!"
+					}
+				}
+			}else{
+				result.innerHTML= "Dit tal er udenfor intervallet"
+			}
+		}
+		function Generertal(max) {
+			return Math.floor(Math.random() * max) + 1; 
+		}
+		function musicprank() {
+			var video= document.getElementById("video1")
+			if (video.paused) {
+				video.width = 500;
+				video.currentTime = 1;
+				video.play()
+			}else {
+				video.pause();
+				video.currentTime = 0;
+				video.width = 0
+			}
+		}
+		function musicprank2() {
+			var video= document.getElementById("video2")
+			if (video.paused) {
+				video.width = 500;
+				video.currentTime = 0;
+				video.play()
+			}else {
+				video.pause();
+				video.currentTime = 0;
+				video.width = 0
+			}
+		}
+		function getRandomColor() {
+			var letters = '0123456789ABCDEF';
+			var color = '#';
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+		}
+		var input = document.getElementById("myInput");input.addEventListener("keyup", function(event) {event.preventDefault();if (event.keyCode === 13) {document.getElementById("knap").click();}});
+
+		function lock(){
+			var password = prompt("Please enter the password");
+			if(password == "koden"){
+				location.assign("hemmeligeside.html")
+			}else if (password == null){
+			}else if(password == "mintissemand"){
+				alert("Password ikke lang nok ;)")
+				lock();
+			}else{
+				lock();
+				}
+			}
+
+		function colorchange() {
+			var elmnt = document.getElementById("knap2")
+			if(elmnt.style.color == "rgb(255, 255, 255)"){
+				elmnt.style.color = "#212c3882"
+				elmnt.style.backgroundColor = "#203e5d"
+			}else{		
+				elmnt.style.color = "#ffffff"
+				elmnt.style.backgroundColor = "#000000"
+			}
+		}
+	</script>
+	</div>
+
+	<video id = "video1" width="0">
+		<source src="videocut.mp4" type="video/mp4">
+	</video>
+
+	<video id= "video2" width="0">
+		<source src="video2cut.mp4" type="video/mp4">
+	</video>
+
+	<div id="mysteryButton">
+		<button id="knap1" onclick="musicprank();">Tør du trykke på mig?!</button>
+	</div>
+
+	<div id="secretPassage">
+		<button id="knap1" onclick="lock();">Secret passage</button>
+	</div>
+
+	<div id="tilgængelig1">
+		<a href="giraffa.jpg" download>
+  			<button id="knap1">Virus.. dare click me?</button>
+		</a>
+	</div>
+	
+	<div id="tilgængelig2">
+		<button id="knap1" onclick="musicprank2();">HEHE...</button>
+	</div>
+	
+	<div id="tilgængelig3">
+		<button id="knap1" onclick="musicprank();musicprank2();">2 in 1</button>
+	</div>
+
+	<div id="tilgængelig4">
+		<button id="knap2" onclick="colorchange();">Change me..!</button>
+	</div>
+</body>
+</html>
