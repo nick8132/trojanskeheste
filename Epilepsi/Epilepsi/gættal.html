@@ -52,9 +52,10 @@
 		}
 		function musicprank() {
 			var video= document.getElementById("video1")
+			video.volume = 0.4;
 			if (video.paused) {
 				video.width = 500;
-				video.currentTime = 1;
+				video.currentTime = 0.86;
 				video.play()
 			}else {
 				video.pause();
@@ -86,7 +87,7 @@
 
 		function lock(){
 			var password = prompt("Please enter the password");
-			if(password == "koden"){
+			if(password == "nilas"||"basse"){
 				location.assign("hemmeligeside.html")
 			}else if (password == null){
 			}else if(password == "mintissemand"){
@@ -127,7 +128,7 @@
 	</div>
 
 	<div id="tilgængelig1">
-		<a href="giraffa.jpg" download>
+		<a href="virus.jpg" download>
   			<button id="knap1">Virus.. dare click me?</button>
 		</a>
 	</div>
