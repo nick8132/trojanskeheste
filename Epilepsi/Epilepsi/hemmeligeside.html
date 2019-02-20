@@ -2,10 +2,29 @@
 <html>
 <head>
 	<title>Mini Boppa</title>
+	<link rel="stylesheet" type="text/css" href="styleatman.css">
 </head>
-<body>
+<body onload="lock()">
 	<h1>You beat Atman</h1>
 	<h2>There's nothing here... yet</h2>
+	<h2>But here's video... enjoy :)</h2>
+	<div align = "center">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/4M1hP11CWKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<script type="text/javascript">
+			function lock(){
+			var password = prompt("Please enter the hometown of Atman");
+			if(password == "madras"){
+			}else if (password == null){
+				lock();
+			}else if(password == "mintissemand"){
+				alert("Password ikke lang nok ;)")
+				lock();
+			}else{
+				lock();
+				}
+			}
+		</script>
 </body>
 </html>
 
