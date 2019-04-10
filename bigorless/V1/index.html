@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>BigOrLessCalc</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="greaterthanicon.png">
+  <script src="second.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="body "onload="onload()">
+
+	<div class="header">
+		BigOrLessCalc
+	</div>
+
+    <div class="row">
+
+   		<div class="calc">
+               
+   			<p>Indtast tal: 
+   				<br><br>
+   			<input class="textbox" id="maks" type="text" required></p>
+   				<br>
+   			<p>Indtast andet tal, tjek om det er større eller mindre: 
+   				<br><br>
+   			<input class="textbox" id="bigorless" type="text" required></p> 
+   				<br>
+   			<button id="myBtn" onclick="calcbigorless();"><span>Beregn</span></button> 
+   				<br>
+   			<br><div id="result"></div>
+   		</div>
+   	</div>
+		
+   	<video id="video" width="0">
+   		<source src="answertolife.mp4" type="video/mp4">
+   	</video>
+    
+    	<div class="footer">
+  		&copy; Sebastian Bach - 2019
+   		<button class="bgchange" onclick="bgchange();"></button>
+   		<a class="link" href="../V2">Link to V2</a>
+	</div>
+
+</body>
+
+</html>
