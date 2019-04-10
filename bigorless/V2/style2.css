@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+}
+
+.body {
+	position: relative;
+	min-height: 100vh;
+	overflow: auto;
+	background-color: #161918;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: #116466;
+	padding: 20px;
+	color: black;
+	text-align: center;
+	font-size: 60px;
+}
+
+.column {
+	float: left;
+	padding: 10px;
+	color: white;
+}
+
+.column.side {
+	width: 25%;
+	border: 1px solid #FFCB9A;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.column.middle {
+	width: 50%;
+	text-align: center;
+	border: 1px solid #FFCB9A;
+	margin: 5px;
+}
+
+.row {
+	padding-bottom: 2.5rem;
+	display: flex;
+	flex: 1;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#result {
+	word-break: break-all;
+}
+
+.footer {
+	background-color: #282828;
+	padding: 10px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+}
+
+@media (max-width: 600px) {
+	.column.side, .column.middle {
+		width: 100%;
+	}
+}
+
+#myBtn {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #116466;
+  border: 1px solid white;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 25%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2.5px;
+  outline: none;
+}
+
+#myBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#myBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+#myBtn:hover span {
+  padding-right: 12.5px;
+}
+
+#myBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+input[type=text] {
+	background-color: #161918;
+	color: white;
+	text-align: center;
+	width: 35%;
+	padding: 6px;
+	border: 1.5px solid #ffcb9a;
+	border-radius: 15px;
+	outline: none;
+}
+
+.link {
+	position: absolute;
+	right: 3%;
+	color: #116466; 
+}
+
+.link:link {
+ 	text-decoration: none;
+}
+
+.link:visited {
+ 	text-decoration: none;
+}
+
+.link:hover {
+ 	text-decoration: underline;
+ 	color: #FFCB9A;
+}
+
+.link:active {
+ 	text-decoration: underline;
+}
